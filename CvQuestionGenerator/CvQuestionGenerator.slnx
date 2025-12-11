@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CvQuestionGenerator.API\CvQuestionGenerator.API.csproj" />
+  <Project Path="CvQuestionGenerator.AppHost/CvQuestionGenerator.AppHost.csproj" />
+  <Project Path="CvQuestionGenerator.ServiceDefaults/CvQuestionGenerator.ServiceDefaults.csproj" />
+</Solution>
