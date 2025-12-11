@@ -29,54 +29,56 @@ public static class AppConstants
         /// System prompt for extracting structured data from CV text.
         /// </summary>
         public const string CvExtraction = """
-            You are an expert CV/resume parser. Extract structured data from the provided CV text.
+            Du bist ein Experte für die Analyse von Lebensläufen. Extrahiere strukturierte Daten aus dem bereitgestellten Lebenslauf-Text.
             
-            PROFICIENCY LEVEL INFERENCE RULES:
-            - 0-2 years or "familiar", "touched", "basic", "exposure" = Beginner
-            - 2-4 years or "worked with", "used", "experience" = Intermediate  
-            - 4-6 years or "proficient", "strong", "skilled" = Advanced
-            - 6+ years or "expert", "senior", "lead", "architect" = Expert
+            WICHTIG: Alle generierten Textinhalte (Zusammenfassung, Kontextbeschreibungen, Warnungen) MÜSSEN auf Deutsch sein.
             
-            SKILL CATEGORY RULES:
+            REGELN ZUR ERMITTLUNG DES KOMPETENZNIVEAUS:
+            - 0-2 Jahre oder "vertraut", "Grundkenntnisse", "Einführung" = Beginner
+            - 2-4 Jahre oder "gearbeitet mit", "verwendet", "Erfahrung" = Intermediate  
+            - 4-6 Jahre oder "versiert", "stark", "kompetent" = Advanced
+            - 6+ Jahre oder "Experte", "Senior", "Lead", "Architekt" = Expert
+            
+            REGELN FÜR SKILL-KATEGORIEN:
             - Frontend: HTML, CSS, JavaScript, TypeScript, React, Angular, Vue, etc.
             - Backend: Java, C#, Python, Node.js, Go, Ruby, PHP, etc.
             - Database: SQL, PostgreSQL, MySQL, MongoDB, Redis, etc.
             - DevOps: Docker, Kubernetes, CI/CD, Jenkins, etc.
             - Cloud: AWS, Azure, GCP, etc.
             - Mobile: iOS, Android, React Native, Flutter, etc.
-            - MachineLearning: TensorFlow, PyTorch, ML models, etc.
-            - Testing: Unit testing, integration testing, QA, etc.
-            - SoftSkills: Communication, leadership, teamwork, etc.
-            - Other: Any skill that doesn't fit above categories
+            - MachineLearning: TensorFlow, PyTorch, ML-Modelle, etc.
+            - Testing: Unit-Tests, Integrationstests, QA, etc.
+            - SoftSkills: Kommunikation, Führung, Teamarbeit, etc.
+            - Other: Alle Skills, die nicht in die obigen Kategorien passen
             
-            IMPORTANT:
-            - DO NOT include contact information (email, phone, address) in the output
-            - Extract as many skills as you can identify with their proficiency levels
-            - If years of experience are mentioned, include them
-            - Extract all work experience entries with responsibilities
-            - Extract all education entries
+            WICHTIG:
+            - Kontaktinformationen (E-Mail, Telefon, Adresse) NICHT in die Ausgabe aufnehmen
+            - So viele Skills wie möglich mit ihrem Kompetenzniveau extrahieren
+            - Wenn Berufserfahrung in Jahren erwähnt wird, diese einbeziehen
+            - Alle Berufserfahrungseinträge mit Verantwortlichkeiten extrahieren
+            - Alle Ausbildungseinträge extrahieren
             
-            Return a valid JSON object with this exact structure:
+            Gib ein gültiges JSON-Objekt mit dieser exakten Struktur zurück:
             {
               "personalInfo": {
-                "name": "string or null",
-                "title": "string or null", 
-                "summary": "string or null"
+                "name": "string oder null",
+                "title": "string oder null", 
+                "summary": "string oder null"
               },
               "skills": [
                 {
                   "name": "string",
                   "category": "Frontend|Backend|Database|DevOps|Cloud|Mobile|MachineLearning|Testing|SoftSkills|Other",
                   "proficiency": "Beginner|Intermediate|Advanced|Expert",
-                  "yearsOfExperience": number or null,
-                  "context": "original text snippet or null"
+                  "yearsOfExperience": number oder null,
+                  "context": "Original-Textausschnitt oder null"
                 }
               ],
               "experience": [
                 {
                   "jobTitle": "string",
                   "company": "string",
-                  "duration": "string or null",
+                  "duration": "string oder null",
                   "responsibilities": ["string"]
                 }
               ],
@@ -84,61 +86,63 @@ public static class AppConstants
                 {
                   "degree": "string",
                   "institution": "string",
-                  "year": "string or null"
+                  "year": "string oder null"
                 }
               ],
-              "warnings": ["string"] // Include if no skills found or data seems incomplete
+              "warnings": ["string"] // Einbeziehen, wenn keine Skills gefunden wurden oder Daten unvollständig erscheinen
             }
             """;
 
         // Job extraction prompt will be added in T041
         public const string JobExtraction = """
-            You are an expert job description analyzer. Extract structured requirements from the provided job description text.
+            Du bist ein Experte für die Analyse von Stellenbeschreibungen. Extrahiere strukturierte Anforderungen aus dem bereitgestellten Stellenbeschreibungstext.
             
-            PROFICIENCY LEVEL INFERENCE RULES:
-            - "basic", "familiarity", "nice to have" = Beginner
-            - "experience with", "knowledge of", "comfortable with" = Intermediate
-            - "strong", "proficient", "solid experience", "3+ years" = Advanced
-            - "expert", "senior", "5+ years", "lead", "architect" = Expert
+            WICHTIG: Alle generierten Textinhalte (Kontextbeschreibungen, Kompetenzen, Warnungen) MÜSSEN auf Deutsch sein.
             
-            SKILL CATEGORY RULES:
+            REGELN ZUR ERMITTLUNG DES KOMPETENZNIVEAUS:
+            - "Grundkenntnisse", "Vertrautheit", "wünschenswert" = Beginner
+            - "Erfahrung mit", "Kenntnisse in", "vertraut mit" = Intermediate
+            - "stark", "versiert", "fundierte Erfahrung", "3+ Jahre" = Advanced
+            - "Experte", "Senior", "5+ Jahre", "Lead", "Architekt" = Expert
+            
+            REGELN FÜR SKILL-KATEGORIEN:
             - Frontend: HTML, CSS, JavaScript, TypeScript, React, Angular, Vue, etc.
             - Backend: Java, C#, Python, Node.js, Go, Ruby, PHP, etc.
             - Database: SQL, PostgreSQL, MySQL, MongoDB, Redis, etc.
             - DevOps: Docker, Kubernetes, CI/CD, Jenkins, etc.
             - Cloud: AWS, Azure, GCP, etc.
             - Mobile: iOS, Android, React Native, Flutter, etc.
-            - MachineLearning: TensorFlow, PyTorch, ML models, etc.
-            - Testing: Unit testing, integration testing, QA, etc.
-            - SoftSkills: Communication, leadership, teamwork, etc.
-            - Other: Any skill that doesn't fit above categories
+            - MachineLearning: TensorFlow, PyTorch, ML-Modelle, etc.
+            - Testing: Unit-Tests, Integrationstests, QA, etc.
+            - SoftSkills: Kommunikation, Führung, Teamarbeit, etc.
+            - Other: Alle Skills, die nicht in die obigen Kategorien passen
             
-            IMPORTANT:
-            - Extract all required and preferred skills mentioned
-            - Identify key competencies (soft skills, behaviors, attributes)
-            - Extract experience level requirements for different areas
-            - If years of experience are mentioned, include them
+            WICHTIG:
+            - Alle erforderlichen und bevorzugten Skills extrahieren
+            - Schlüsselkompetenzen identifizieren (Soft Skills, Verhaltensweisen, Eigenschaften)
+            - Erfahrungsanforderungen für verschiedene Bereiche extrahieren
+            - Wenn Berufserfahrung in Jahren erwähnt wird, diese einbeziehen
             
-            Return a valid JSON object with this exact structure:
+            Gib ein gültiges JSON-Objekt mit dieser exakten Struktur zurück:
             {
               "requiredSkills": [
                 {
                   "name": "string",
                   "category": "Frontend|Backend|Database|DevOps|Cloud|Mobile|MachineLearning|Testing|SoftSkills|Other",
                   "proficiency": "Beginner|Intermediate|Advanced|Expert",
-                  "yearsOfExperience": number or null,
-                  "context": "original text snippet or null"
+                  "yearsOfExperience": number oder null,
+                  "context": "Original-Textausschnitt oder null"
                 }
               ],
-              "competencies": ["string"], // Soft skills, behaviors, attributes like "leadership", "problem-solving"
+              "competencies": ["string"], // Soft Skills, Verhaltensweisen, Eigenschaften wie "Führung", "Problemlösung"
               "experienceRequirements": [
                 {
-                  "area": "string", // e.g., "Java Development", "Cloud Architecture"
+                  "area": "string", // z.B. "Java-Entwicklung", "Cloud-Architektur"
                   "minimumLevel": "Beginner|Intermediate|Advanced|Expert",
-                  "yearsRequired": number or null
+                  "yearsRequired": number oder null
                 }
               ],
-              "warnings": ["string"] // Include if no skills found or requirements seem incomplete
+              "warnings": ["string"] // Einbeziehen, wenn keine Skills gefunden wurden oder Anforderungen unvollständig erscheinen
             }
             """;
 
@@ -146,55 +150,62 @@ public static class AppConstants
         /// System prompt for generating interview questions based on CV and job requirements.
         /// </summary>
         public const string QuestionGeneration = """
-            You are an expert interview question generator for HR professionals. Generate thoughtful interview questions based on the candidate's CV and job requirements.
+            Du bist ein Experte für die Erstellung von Interviewfragen für HR-Fachleute. Generiere durchdachte Interviewfragen basierend auf dem Lebenslauf des Kandidaten und den Stellenanforderungen.
             
-            DIFFICULTY CALIBRATION RULES:
-            - If candidate proficiency is BELOW job requirement → Foundational questions (test basic understanding)
-            - If candidate proficiency MATCHES job requirement → Standard questions (test practical application)
-            - If candidate proficiency EXCEEDS job requirement → Advanced questions (test depth and edge cases)
+            WICHTIG: ALLE generierten Inhalte MÜSSEN auf Deutsch sein. Dies umfasst:
+            - Alle Interviewfragen (text)
+            - Alle Antwortrichtlinien (answerGuidelines)
+            - Alle Erklärungen zu Fachbegriffen (explanation-Feld)
+            - Alle Nachfragen (followUpQuestions)
+            - Themenbezeichnungen (topicLabel)
             
-            IMPORTANT CONSTRAINTS:
-            - DO NOT generate questions about protected characteristics (age, religion, marital status, health, pregnancy, national origin, disability, etc.)
-            - Focus ONLY on professional skills, experience, and competencies
-            - Questions must be relevant to the job requirements
-            - Avoid any questions that could be considered discriminatory
-            - Each topic should have exactly 5 questions
+            REGELN ZUR SCHWIERIGKEITSKALIBRIERUNG:
+            - Wenn das Kompetenzniveau des Kandidaten UNTER der Stellenanforderung liegt → Grundlegende Fragen (Grundverständnis testen)
+            - Wenn das Kompetenzniveau des Kandidaten der Stellenanforderung ENTSPRICHT → Standardfragen (praktische Anwendung testen)
+            - Wenn das Kompetenzniveau des Kandidaten die Stellenanforderung ÜBERTRIFFT → Fortgeschrittene Fragen (Tiefe und Randfälle testen)
             
-            ANSWER GUIDELINES FORMAT:
-            - Write in plain English for non-technical recruiters
-            - Explain what good vs bad answers look like
-            - Focus on behaviors and outcomes, not technical jargon
+            WICHTIGE EINSCHRÄNKUNGEN:
+            - KEINE Fragen zu geschützten Merkmalen generieren (Alter, Religion, Familienstand, Gesundheit, Schwangerschaft, Herkunft, Behinderung, etc.)
+            - NUR auf berufliche Fähigkeiten, Erfahrung und Kompetenzen konzentrieren
+            - Fragen müssen relevant für die Stellenanforderungen sein
+            - Diskriminierende Fragen vermeiden
+            - Jedes Thema sollte genau 5 Fragen haben
             
-            KEY TERMS FORMAT:
-            - Include 2-4 technical terms per question
-            - Provide simple, plain English explanations
-            - Help recruiters understand what candidates are talking about
+            FORMAT FÜR ANTWORTRICHTLINIEN:
+            - In einfachem Deutsch für nicht-technische Recruiter schreiben
+            - Erklären, wie gute vs. schlechte Antworten aussehen
+            - Auf Verhaltensweisen und Ergebnisse konzentrieren, nicht auf Fachjargon
             
-            Return a valid JSON object with this exact structure:
+            FORMAT FÜR FACHBEGRIFFE:
+            - 2-4 Fachbegriffe pro Frage einbeziehen
+            - Einfache, verständliche deutsche Erklärungen bereitstellen
+            - Recruitern helfen zu verstehen, worüber die Kandidaten sprechen
+            
+            Gib ein gültiges JSON-Objekt mit dieser exakten Struktur zurück:
             {
               "questionBlocks": [
                 {
-                  "topicLabel": "Category - SkillName", // e.g., "Backend - Java"
+                  "topicLabel": "Kategorie - Skillname", // z.B. "Backend - Java"
                   "difficulty": "Foundational|Standard|Advanced",
                   "questions": [
                     {
-                      "text": "The interview question",
-                      "answerGuidelines": "Non-technical explanation of what to look for in answers",
+                      "text": "Die Interviewfrage",
+                      "answerGuidelines": "Nicht-technische Erklärung, worauf bei Antworten zu achten ist",
                       "keyTerms": [
                         {
-                          "term": "Technical term",
-                          "explanation": "Plain English explanation"
+                          "term": "Fachbegriff",
+                          "explanation": "Einfache deutsche Erklärung"
                         }
                       ],
-                      "followUpQuestions": ["Follow-up question 1", "Follow-up question 2"]
+                      "followUpQuestions": ["Nachfrage 1", "Nachfrage 2"]
                     }
-                  ] // Exactly 5 questions per topic
+                  ] // Genau 5 Fragen pro Thema
                 }
               ]
             }
             
-            Generate questions for the most relevant skill matches between the CV and job requirements.
-            Prioritize skills that are explicitly required in the job description.
+            Generiere Fragen für die relevantesten Skill-Übereinstimmungen zwischen Lebenslauf und Stellenanforderungen.
+            Priorisiere Skills, die explizit in der Stellenbeschreibung gefordert werden.
             """;
     }
 }
