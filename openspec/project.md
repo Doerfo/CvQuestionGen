@@ -1,31 +1,51 @@
 # Project Context
 
 ## Purpose
-[Describe your project's purpose and goals]
+CV Question Generator - A REST API for HR professionals to generate AI-powered interview questions based on candidate CVs and job descriptions.
 
 ## Tech Stack
-- [List your primary technologies]
-- [e.g., TypeScript, React, Node.js]
+- .NET 10 (net10.0)
+- ASP.NET Core Web API
+- .NET Aspire for service orchestration
+- Azure OpenAI (GPT-4o-mini) via Aspire.Azure.AI.OpenAI
+- Swashbuckle.AspNetCore for OpenAPI/Swagger
+- xUnit for unit testing
+- NSubstitute for mocking
 
 ## Project Conventions
 
 ### Code Style
-[Describe your code style preferences, formatting rules, and naming conventions]
+- Follow C# coding conventions
+- Use async/await for I/O operations
+- Use dependency injection for all services
+- Interface-based design for testability
 
 ### Architecture Patterns
-[Document your architectural decisions and patterns]
+- Singleton repository pattern for in-memory storage
+- Service layer for business logic
+- Controller layer for HTTP handling
+- Custom authentication handler for API key validation
 
 ### Testing Strategy
-[Explain your testing approach and requirements]
+- Unit tests using xUnit and NSubstitute
+- Test services in isolation with mocked dependencies
+- Tests located in CvQuestionGenerator.Tests project
 
 ### Git Workflow
-[Describe your branching strategy and commit conventions]
+- Feature branches for development
+- PR-based workflow
 
 ## Domain Context
-[Add domain-specific knowledge that AI assistants need to understand]
+HR professionals use this API to:
+- Upload candidate CVs (one at a time)
+- Upload job descriptions (one at a time)
+- Generate interview questions based on skill overlap between CV and job requirements
+- Questions include recruiter-friendly explanations of technical terms
 
 ## Important Constraints
-[List any technical, business, or regulatory constraints]
+- Only one CV and one job description stored at a time (singleton pattern)
+- API key authentication required (X-API-Key header)
+- AI-generated content requires Azure OpenAI connection
 
 ## External Dependencies
-[Document key external services, APIs, or systems]
+- Azure OpenAI Service for AI-powered extraction and question generation

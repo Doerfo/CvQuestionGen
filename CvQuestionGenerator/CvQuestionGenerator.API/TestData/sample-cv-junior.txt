@@ -1,0 +1,26 @@
+# Sample CV - Junior Developer
+
+Name: Sarah Johnson
+Email: sarah.johnson@email.com
+Phone: +1 (555) 123-4567
+
+## Summary
+Recent computer science graduate seeking an entry-level software developer position. Eager to learn and grow in a collaborative team environment.
+
+## Skills
+- JavaScript (1 year, university projects)
+- HTML/CSS (2 years, personal projects)
+- Python (touched briefly in coursework)
+- Git (familiar with basic commands)
+- React (completed one tutorial project)
+
+## Education
+- Bachelor of Science in Computer Science
+- State University, 2025
+
+## Work Experience
+**IT Help Desk Intern** - Tech Solutions Inc.
+June 2024 - August 2024
+- Provided technical support to employees
+- Documented common issues and solutions
+- Assisted with basic software installations

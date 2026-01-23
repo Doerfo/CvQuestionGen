@@ -1,0 +1,43 @@
+# Job Description - Mid-Level Developer
+
+## Position: Software Developer
+**Company:** WebTech Innovations  
+**Location:** New York, NY (Remote-friendly)  
+**Employment Type:** Full-time
+
+## About the Role
+Join our development team to build and maintain web applications that serve thousands of users. We're looking for someone who can work independently while contributing to team success.
+
+## Required Skills
+- Java or C# (2-4 years experience)
+- React or Angular (2+ years)
+- JavaScript/TypeScript (2+ years)
+- SQL databases (MySQL, PostgreSQL, or SQL Server)
+- Git and version control workflows
+- REST API development
+- Agile/Scrum methodology experience
+
+## Nice to Have
+- Docker experience
+- Cloud services (AWS or Azure basics)
+- CI/CD familiarity
+- Experience with testing frameworks
+
+## Experience Level
+- 2-4 years of professional software development
+- Demonstrated ability to deliver features independently
+
+## Key Competencies to Assess
+- Independent problem-solving
+- Code quality and testing
+- Collaboration and communication
+- Technical growth mindset
+- Time management
+
+## Responsibilities
+- Develop new features across the full stack
+- Write unit tests and integration tests
+- Participate in code reviews
+- Troubleshoot and debug issues
+- Collaborate with designers and product team
+- Contribute to technical documentation

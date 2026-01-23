@@ -1,0 +1,40 @@
+# Job Description - Junior Developer
+
+## Position: Junior Software Developer
+**Company:** InnovateTech Solutions  
+**Location:** Remote / Hybrid  
+**Employment Type:** Full-time
+
+## About the Role
+We are looking for an enthusiastic Junior Software Developer to join our growing team. This is an excellent opportunity for recent graduates or those early in their career to learn and grow alongside experienced mentors.
+
+## Required Skills
+- Basic knowledge of JavaScript or Python
+- Understanding of HTML and CSS
+- Familiarity with version control (Git)
+- Strong problem-solving skills
+- Good communication skills
+- Willingness to learn new technologies
+
+## Nice to Have
+- Experience with React or Vue.js
+- Basic understanding of databases (SQL)
+- Personal projects or portfolio
+
+## Experience Level
+- 0-2 years of professional experience
+- Recent graduates welcome
+
+## Key Competencies to Assess
+- Problem-solving ability
+- Learning agility
+- Team collaboration
+- Communication skills
+- Basic coding fundamentals
+
+## Responsibilities
+- Write clean, maintainable code
+- Participate in code reviews
+- Learn from senior developers
+- Contribute to team projects
+- Document code and processes

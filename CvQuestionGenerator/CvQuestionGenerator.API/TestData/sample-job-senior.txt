@@ -1,0 +1,47 @@
+# Job Description - Senior Full-Stack Developer
+
+## Position: Senior Full-Stack Developer
+**Company:** Enterprise Solutions Corp  
+**Location:** San Francisco, CA (Hybrid)  
+**Employment Type:** Full-time  
+**Salary Range:** $150,000 - $200,000
+
+## About the Role
+We are seeking an experienced Senior Full-Stack Developer to lead the development of our next-generation cloud platform. You will architect solutions, mentor team members, and drive technical excellence across the organization.
+
+## Required Skills
+- C# / .NET 6+ (5+ years of hands-on experience)
+- Angular or React (4+ years, building enterprise applications)
+- TypeScript (4+ years)
+- SQL Server or PostgreSQL (4+ years)
+- Azure or AWS cloud services (3+ years)
+- Microservices architecture experience
+- RESTful API design and implementation
+- Unit testing and TDD practices
+
+## Nice to Have
+- Docker and Kubernetes experience
+- CI/CD pipeline management
+- Event-driven architecture (Kafka, RabbitMQ)
+- Performance optimization experience
+- Technical leadership experience
+
+## Experience Level
+- 5-8 years of professional software development experience
+- Previous tech lead or senior developer role preferred
+
+## Key Competencies to Assess
+- System design and architecture skills
+- Technical leadership and mentoring
+- Problem-solving at scale
+- Code quality and best practices
+- Cross-team collaboration
+- Communication with stakeholders
+
+## Responsibilities
+- Lead the design and implementation of complex features
+- Mentor junior and mid-level developers
+- Conduct code reviews and establish coding standards
+- Collaborate with product managers on technical decisions
+- Drive architectural improvements
+- Troubleshoot production issues

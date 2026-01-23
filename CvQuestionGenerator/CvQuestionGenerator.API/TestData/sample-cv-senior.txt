@@ -1,0 +1,52 @@
+# Sample CV - Senior Developer
+
+Name: Michael Chen
+Email: m.chen@techmail.com
+Phone: +1 (555) 987-6543
+LinkedIn: linkedin.com/in/michaelchen
+
+## Professional Summary
+Experienced full-stack developer with 7+ years of experience building scalable web applications. Expert in C# and .NET ecosystem with strong frontend skills in Angular.
+
+## Technical Skills
+- C# / .NET Core / .NET 8 (7 years, lead developer on multiple enterprise projects)
+- Angular (5 years, built e-commerce platform serving 1M+ users)
+- TypeScript (5 years, extensive experience)
+- SQL Server / PostgreSQL (6 years)
+- Azure (4 years, Azure certified)
+- Docker / Kubernetes (3 years)
+- Microservices Architecture (4 years)
+- Unit Testing / TDD (6 years)
+
+## Work Experience
+
+**Senior Software Engineer** - Enterprise Solutions Corp.
+January 2021 - Present
+- Lead a team of 5 developers building cloud-native applications
+- Architected microservices platform handling 10K requests/second
+- Mentored junior developers and conducted code reviews
+- Reduced deployment time by 70% through CI/CD improvements
+
+**Software Developer** - WebTech Innovations
+March 2018 - December 2020
+- Developed Angular-based SPA for healthcare management system
+- Implemented RESTful APIs using ASP.NET Core
+- Migrated legacy monolith to microservices architecture
+- Improved application performance by 40%
+
+**Junior Developer** - StartupXYZ
+June 2016 - February 2018
+- Built features for e-commerce platform using C# and Angular
+- Wrote unit tests achieving 85% code coverage
+- Participated in agile ceremonies and sprint planning
+
+## Education
+- Master of Science in Software Engineering
+- Tech University, 2016
+
+- Bachelor of Science in Computer Science
+- State College, 2014
+
+## Certifications
+- Microsoft Certified: Azure Developer Associate
+- AWS Certified Solutions Architect

@@ -1,0 +1,43 @@
+# Sample CV - Mid-Level Developer
+
+Name: Emily Rodriguez
+Email: emily.r@devmail.com
+Phone: +1 (555) 456-7890
+
+## Summary
+Software developer with 3 years of experience in web development. Passionate about clean code and continuous learning.
+
+## Skills
+- Java (3 years, primary language at current job)
+- Spring Boot (2 years, built REST APIs)
+- React (2 years, frontend development)
+- JavaScript/TypeScript (3 years)
+- MySQL (3 years)
+- Docker (1 year, containerizing applications)
+- AWS (touched basics - S3, EC2)
+- Git (3 years)
+- Agile/Scrum (3 years)
+
+## Work Experience
+
+**Software Developer** - Digital Agency Inc.
+August 2022 - Present
+- Develop and maintain Java-based backend services
+- Build React components for customer-facing applications
+- Participate in code reviews and sprint planning
+- Collaborate with QA team on testing strategies
+
+**Junior Developer** - Local Software Company
+July 2021 - July 2022
+- Developed features using Java and Spring Boot
+- Created responsive web pages using React
+- Fixed bugs and improved existing codebase
+- Learned CI/CD practices using Jenkins
+
+## Education
+- Bachelor of Science in Information Technology
+- Community University, 2021
+
+## Projects
+- Personal blog built with React and Node.js
+- Open source contributions to documentation projects
